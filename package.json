@@ -1,0 +1,27 @@
+{
+  "name": "EnjoyViewer",
+  "version": "0.0.1",
+  "description": "A EnjoyViewer for the web",
+  "main": "./src/index.js",
+  "browser": "./dist/viewer.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/bravefuture/EnjoyViewer.git"
+  },
+  "author": "yongcheng0660@163.com",
+  "license": "",
+  "homepage": "http://github.com/bravefuture/EnjoyViewer.git",
+  "devDependencies": {
+    "css-loader": "^0.21.0",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "node-sass": "^3.8.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.9.0",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {}
+}

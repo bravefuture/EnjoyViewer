@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>仿pdf阅读器</title>
+</head>
+
+<body>
+
+	<div class="viewer" style="margin: 20px auto 0">
+		<div class="viewer-control">
+			<span class="line"></span>
+			<div class="scaling">
+				<div class="scaling-line"></div>
+				<div class="scaling-bar"></div>
+			</div>
+			<input type="text" class="input-text percentage" />
+			<div class="full-screen">
+				<i class="fs-t"></i>
+				<i class="fs-c"></i>
+				<i class="fs-b"></i>
+			</div>
+			<span class="line"></span>
+			<i class="arrow-left"></i>
+			<input type="text" class="input-text page-num" /> <span>/</span> <span class="page-total"></span>
+			<i class="arrow-right"></i>
+		</div>
+		<div class="viewer-content">
+		</div>
+	</div>
+	
+	
+    <script src="lib/jquery-1.11.1.js"></script>
+	<script src="dist/viewer.js"></script>
+	<script>
+		var viewer = new Enjoy.Viewer({
+			viewerWrap: '.viewer',
+			viewerControl: '.viewer-control',
+			viewerContent: '.viewer-content',
+			arrowLeft: '.arrow-left',
+			arrowRight: '.arrow-right',
+			pageNum: '.page-num',
+			pageTotal: '.page-total',
+			percentage: '.percentage',
+			scalingLine: '.scaling-line',
+			scalingBar: '.scaling-bar',
+			fullScreen: '.full-screen',
+			rangeFrom: 30,
+			rangeTo: 500,
+			scale: 100,
+			blankImg: 'src/images/blank_img.gif',
+			imgData: ['src/images/p1.png', 'src/images/p2.png', 'src/images/p3.png', 'src/images/p4.png', 'src/images/p5.png', 'src/images/p6.png'],
+			callback: function(index){
+				console.log && console.log(index);
+			}
+		});		
+	</script>
+</body>
+
+</html>
